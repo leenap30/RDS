@@ -13,11 +13,15 @@ resource "aws_db_instance" "default" {
   engine               = "mysql"
   engine_version       = "5.7"
   instance_class       = "db.t2.micro"
-  name                 = "mydb"
+  name                 = "TCSdemo"
   username             = "admin"
   password             = "adminmaster"
   db_subnet_group_name=aws_db_subnet_group.default.name
   vpc_security_group_ids=[aws_security_group.db.id]
+  
+  tags = {
+    Name = "My db instance"
+  }
 }
 
 output "end_point" {
