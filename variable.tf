@@ -19,7 +19,7 @@ variable "device_name" {
 }
 variable "key_name" {
   type    = string
-  default = "NewKey"
+  default = "USEAST1"
 }
 
 variable "cidr" {
